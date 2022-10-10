@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="311.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uts2019110026cindyv.FXML_ResepController">
+   <children>
+      <Button fx:id="btnresep" layoutX="179.0" layoutY="81.0" mnemonicParsing="false" onAction="#resepklik" text="Resep">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="btndetail" layoutX="146.0" layoutY="176.0" mnemonicParsing="false" onAction="#detailklik" text="Detail Resep">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnkeluar" layoutX="200.0" layoutY="272.0" mnemonicParsing="false" onAction="#keluarklik" text="Keluar" />
+   </children>
+</AnchorPane>

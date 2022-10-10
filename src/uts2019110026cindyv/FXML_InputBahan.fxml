@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="309.0" prefWidth="381.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="uts2019110026cindyv.FXML_InputBahanController">
+   <children>
+      <Button fx:id="btnsimpan" layoutX="57.0" layoutY="236.0" mnemonicParsing="false" onAction="#simpanklik" text="Simpan" />
+      <Button fx:id="btnhapus" layoutX="166.0" layoutY="236.0" mnemonicParsing="false" onAction="#hapusklik" text="Hapus" />
+      <Button fx:id="btnkembali" layoutX="263.0" layoutY="236.0" mnemonicParsing="false" onAction="#kembaliklik" text="Kembali" />
+      <Label layoutX="52.0" layoutY="50.0" text="Id Item">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtiditem" layoutX="146.0" layoutY="45.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtnama" layoutX="146.0" layoutY="93.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="52.0" layoutY="98.0" text="Nama Item">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtjenis" layoutX="146.0" layoutY="153.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="52.0" layoutY="158.0" text="Jenis Item">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

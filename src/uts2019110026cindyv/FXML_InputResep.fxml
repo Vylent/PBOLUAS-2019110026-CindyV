@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="321.0" prefWidth="422.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uts2019110026cindyv.FXML_InputResepController">
+   <children>
+      <Label layoutX="49.0" layoutY="61.0" text="Id Resep">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="109.0" text="Nama Resep">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="169.0" text="Success Rate">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtidresep" layoutX="156.0" layoutY="55.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtnama" layoutX="156.0" layoutY="103.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtsucrate" layoutX="156.0" layoutY="163.0" prefHeight="31.0" prefWidth="112.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="273.0" layoutY="168.0" text="\%">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnkembali" layoutX="273.0" layoutY="246.0" mnemonicParsing="false" onAction="#kembaliklik" text="Kembali" />
+      <Button fx:id="btnhapus" layoutX="176.0" layoutY="246.0" mnemonicParsing="false" onAction="#hapusklik" text="Hapus" />
+      <Button fx:id="btnsimpan" layoutX="67.0" layoutY="246.0" mnemonicParsing="false" onAction="#simpanklik" text="Simpan" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="386.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uts2019110026cindyv.FXMLDocumentController">
+   <children>
+      <Group>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="78.0" layoutX="41.0" layoutY="68.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="185.0" />
+            <Label layoutX="107.0" layoutY="72.0" text="Bahan">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnlihatbahan" layoutX="50.0" layoutY="107.0" mnemonicParsing="false" onAction="#lihatbahanklik" prefHeight="31.0" prefWidth="77.0" text="Lihat">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btntambahbahan" layoutX="141.0" layoutY="107.0" mnemonicParsing="false" onAction="#tambahbahanklik" prefHeight="31.0" prefWidth="77.0" text="Tambah">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Group>
+      <Group>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="78.0" layoutX="41.0" layoutY="169.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.5" width="185.0" />
+            <Label layoutX="108.0" layoutY="173.0" text="Resep">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnlihatresep" layoutX="50.0" layoutY="208.0" mnemonicParsing="false" onAction="#lihatresepklik" prefHeight="31.0" prefWidth="77.0" text="Lihat">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="btntambahresep" layoutX="141.0" layoutY="208.0" mnemonicParsing="false" onAction="#tambahresepklik" prefHeight="31.0" prefWidth="77.0" text="Tambah">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Group>
+      <Button fx:id="btnhasil" layoutX="60.0" layoutY="307.0" mnemonicParsing="false" onAction="#hasilklik" prefHeight="25.0" prefWidth="119.0" text="Hasil" />
+      <Button layoutX="504.0" layoutY="221.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="90.0" text="Craft" />
+   </children>
+</AnchorPane>

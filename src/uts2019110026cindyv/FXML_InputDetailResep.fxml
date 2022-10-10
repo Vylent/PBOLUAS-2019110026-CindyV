@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="341.0" prefWidth="419.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="uts2019110026cindyv.FXML_InputDetailResepController">
+   <children>
+      <Button fx:id="btnsimpan" layoutX="77.0" layoutY="256.0" mnemonicParsing="false" onAction="#simpanklik" text="Simpan" />
+      <Button fx:id="btnhapus" layoutX="186.0" layoutY="256.0" mnemonicParsing="false" onAction="#hapusklik" text="Hapus" />
+      <Button fx:id="btnkembali" layoutX="283.0" layoutY="256.0" mnemonicParsing="false" onAction="#kembaliklik" text="Kembali" />
+      <TextField fx:id="txtidresep" layoutX="166.0" layoutY="65.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtiditem" layoutX="166.0" layoutY="113.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtjumlah" layoutX="166.0" layoutY="173.0" prefHeight="31.0" prefWidth="112.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="59.0" layoutY="71.0" text="Id Resep">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="119.0" text="Id Item">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="59.0" layoutY="179.0" text="Jumlah">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

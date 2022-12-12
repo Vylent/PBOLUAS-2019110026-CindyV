@@ -105,7 +105,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void tambahresepklik(ActionEvent event) {
     try{
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("FXML_Resep.fxml"));    
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("FXML_InputRecipe.fxml"));    
         Parent root = (Parent)loader.load();
         Scene scene = new Scene(root);
         Stage stg=new Stage();

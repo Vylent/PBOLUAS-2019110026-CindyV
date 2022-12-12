@@ -11,6 +11,16 @@ package uts2019110026cindyv;
 public class ResepModel {
     private String IdResep,NamaResep;
     private Integer SuccessRate;
+    
+     public ResepModel() {
+        
+      }
+    
+    public ResepModel(String IdResep, String NamaResep, Integer SuccessRate) {
+        this.IdResep=IdResep; 
+        this.NamaResep=NamaResep;
+        this.SuccessRate=SuccessRate;  
+      }
 
     public String getIdResep() {
         return IdResep;

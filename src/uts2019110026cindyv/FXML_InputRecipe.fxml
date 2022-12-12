@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uts2019110026cindyv.FXML_InputRecipeController">
+   <children>
+      <TextField fx:id="txtidresep" layoutX="104.0" layoutY="66.0" onKeyPressed="#idresepkey" />
+      <TextField fx:id="txtnamaresep" layoutX="104.0" layoutY="103.0" />
+      <TextField fx:id="txtsuccessrate" layoutX="104.0" layoutY="140.0" />
+      <Label layoutX="25.0" layoutY="70.0" text="IdResep" />
+      <Label layoutX="26.0" layoutY="107.0" text="NamaResep" />
+      <Label layoutX="25.0" layoutY="144.0" text="SuccessRate" />
+      <Label layoutX="29.0" layoutY="255.0" text="IdItem" />
+      <TextField fx:id="txtiditem" layoutX="104.0" layoutY="251.0" />
+      <Label fx:id="lblnamaitem" layoutX="32.0" layoutY="224.0" text="..." />
+      <TextField fx:id="txtjumlah" layoutX="104.0" layoutY="287.0" />
+      <Label layoutX="29.0" layoutY="291.0" text="Jumlah" />
+      <Button fx:id="btntambah" layoutX="32.0" layoutY="337.0" mnemonicParsing="false" onAction="#tambahklik" text="Tambah" />
+      <Button fx:id="btnclear" layoutX="104.0" layoutY="337.0" mnemonicParsing="false" onAction="#clearklik" text="Clear" />
+      <Button fx:id="btnsimpan" layoutX="470.0" layoutY="337.0" mnemonicParsing="false" onAction="#simpanklik" text="Simpan" />
+      <Button fx:id="btnbatal" layoutX="541.0" layoutY="337.0" mnemonicParsing="false" onAction="#batalklik" text="Batal" />
+      <Button fx:id="btnkeluar" layoutX="527.0" layoutY="20.0" mnemonicParsing="false" onAction="#keluarklik" text="Keluar" />
+      <Button fx:id="btnhapus" layoutX="333.0" layoutY="337.0" mnemonicParsing="false" onAction="#hapusklik" text="Hapus" />
+      <TableView fx:id="tbvrecipe" layoutX="268.0" layoutY="66.0" onMouseClicked="#tbvrecipeklik" prefHeight="256.0" prefWidth="318.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnpilih" layoutX="214.0" layoutY="212.0" mnemonicParsing="false" onAction="#pilihklik" text="Pilih" />
+   </children>
+</AnchorPane>

@@ -117,8 +117,9 @@ tbvrecipe.getItems().add(tmp);
 
     @FXML
     private void simpanklik(ActionEvent event) {
-        dt.getResepModel().setNamaResep(txtnamaresep.getText());
         dt.getResepModel().setIdResep(txtidresep.getText());
+        dt.getResepModel().setNamaResep(txtnamaresep.getText());
+        dt.getResepModel().setSuccessRate(Integer.parseInt(txtsuccessrate.getText()));
         if(dt.saveall()){
         Alert a=new Alert(Alert.AlertType.INFORMATION,"Data berhasil disimpan ",ButtonType.OK);
                a.showAndWait(); 

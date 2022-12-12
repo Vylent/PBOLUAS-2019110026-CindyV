@@ -13,24 +13,25 @@ import javafx.collections.ObservableList;
  *
  * @author 2019110026CindyV
  */
-public class DBBahan {
-    private BahanModel dt=new BahanModel();    
-    public BahanModel getBahanModel(){ return(dt);}
-    public void setBahanModel(BahanModel b){ dt=b;}    
+public class DBCraft {
+    private CraftModel dt=new CraftModel();    
+    public CraftModel getCraftModel(){ return(dt);}
+    public void setCraftModel(CraftModel b){ dt=b;}    
 
-    public ObservableList<BahanModel>  Load() {
-        try {   ObservableList<BahanModel> TableData=FXCollections.observableArrayList();
+    public ObservableList<CraftModel>  Load() {
+        try {   ObservableList<CraftModel> TableData=FXCollections.observableArrayList();
             Koneksi con = new Koneksi(); 
            con.bukaKoneksi();
             con.statement = con.dbKoneksi.createStatement();
             ResultSet rs = con.statement.executeQuery(
-            "Select IdItem, NamaItem, JenisItem from bahan");
+            "Select IdCraft, IdResep, TanggalCraft,Jumlah from craft");
             int i = 1;
             while (rs.next()) {
-                BahanModel d=new BahanModel();
-                d.setIdItem(rs.getString("IdItem")); 
-                d.setNamaItem(rs.getString("NamaItem"));
-                d.setJenisItem(rs.getString("JenisItem"));
+                CraftModel d=new CraftModel();
+                d.setIdCraft(rs.getString("IdCraft")); 
+                d.setIdResep(rs.getString("IdResep"));
+                d.setTanggalCraft(rs.getDate("TanggalCraft"));
+                d.setJumlah(rs.getInt("Jumlah"));
                 TableData.add(d);
                 i++;
             }
@@ -42,37 +43,13 @@ public class DBBahan {
         }
     }
     
-    public ObservableList<BahanModel> LookUp(String fld,String dt){
-   try{
-       ObservableList<BahanModel> tableData=FXCollections.observableArrayList();
-       Koneksi con=new Koneksi();
-       con.bukaKoneksi();
-       con.statement = con.dbKoneksi.createStatement();
-       ResultSet rs = con.statement.executeQuery("Select IdItem, NamaItem, JenisItem from bahan where "+fld+" like '%"+dt+"%'");
-       int i=1;
-       while (rs.next()){
-                BahanModel d=new BahanModel();
-                d.setIdItem(rs.getString("IdItem"));
-                d.setNamaItem(rs.getString("NamaItem"));
-                d.setJenisItem(rs.getString("JenisItem"));
-                tableData.add(d);
-                i++;
-       }
-       con.tutupKoneksi();
-       return tableData;
-   } catch (SQLException ex){
-       ex.printStackTrace();
-       return null;
-   }
-}
-    
     public int validasi(String nomor) {
         int val = 0;
         try {
             Koneksi con = new Koneksi();
             con.bukaKoneksi();
             con.statement = con.dbKoneksi.createStatement();
-            ResultSet rs = con.statement.executeQuery("select count(*) as jml from bahan where IdItem = '" + nomor + "'");
+            ResultSet rs = con.statement.executeQuery("select count(*) as jml from craft where IdCraft = '" + nomor + "'");
             while (rs.next()) {
                 val = rs.getInt("jml");
             }
@@ -88,10 +65,10 @@ public class DBBahan {
         Koneksi con = new Koneksi();
         try {
             con.bukaKoneksi();
-            con.preparedStatement = con.dbKoneksi.prepareStatement("insert into bahan (IdItem, NamaItem, JenisItem) values (?,?,?)");
-            con.preparedStatement.setString(1, getBahanModel().getIdItem());
-            con.preparedStatement.setString(2, getBahanModel().getNamaItem());
-            con.preparedStatement.setString(3, getBahanModel().getJenisItem());
+            con.preparedStatement = con.dbKoneksi.prepareStatement("insert into craft (IdCraft, IdResep, TanggalCraft, Jumlah) values (?,?,?,?)");
+            con.preparedStatement.setString(1, getCraftModel().getIdCraft());
+            con.preparedStatement.setString(2, getCraftModel().getIdResep());
+            con.preparedStatement.setDate(3, getCraftModel().getTanggalCraft());
             con.preparedStatement.executeUpdate();
             berhasil = true;
         } catch (Exception e) {
@@ -108,7 +85,7 @@ public class DBBahan {
         Koneksi con = new Koneksi();
         try {
             con.bukaKoneksi();;
-            con.preparedStatement = con.dbKoneksi.prepareStatement("delete from bahan where IdItem  = ? ");
+            con.preparedStatement = con.dbKoneksi.prepareStatement("delete from craft where IdCraft  = ? ");
             con.preparedStatement.setString(1, nomor);
             con.preparedStatement.executeUpdate();
             berhasil = true;
@@ -126,10 +103,11 @@ public class DBBahan {
         try {
             con.bukaKoneksi();
             con.preparedStatement = con.dbKoneksi.prepareStatement(
-                    "update bahan set NamaItem = ?, JenisItem = ?  where  IdItem = ? ; ");
-            con.preparedStatement.setString(1, getBahanModel().getNamaItem());
-            con.preparedStatement.setString(2, getBahanModel().getJenisItem());
-            con.preparedStatement.setString(3, getBahanModel().getIdItem());
+                    "update craft set IdResep = ?, TanggalCraft = ?, Jumlah = ?  where  IdCraft = ? ; ");
+            con.preparedStatement.setString(1, getCraftModel().getIdCraft());
+            con.preparedStatement.setString(2, getCraftModel().getIdResep());
+            con.preparedStatement.setDate(3, getCraftModel().getTanggalCraft());
+            con.preparedStatement.setInt(3, getCraftModel().getJumlah());
             con.preparedStatement.executeUpdate();
             berhasil = true;
         } catch (Exception e) {
@@ -139,7 +117,5 @@ public class DBBahan {
             con.tutupKoneksi();
             return berhasil;
         }
-    }
-
-
+    } 
 }

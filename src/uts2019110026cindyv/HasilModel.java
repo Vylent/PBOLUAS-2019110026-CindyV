@@ -9,5 +9,6 @@ package uts2019110026cindyv;
  * @author 2019110026CindyV
  */
 public class HasilModel {
-    String IdHasil,IdCraft,NamaHasil,Jumlah;
+    String IdHasil,IdCraft,NamaHasil, DeskripsiItem, Jumlah;
+    
 }

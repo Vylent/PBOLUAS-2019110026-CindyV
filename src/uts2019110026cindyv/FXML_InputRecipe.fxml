@@ -15,8 +15,8 @@
       <Label layoutX="26.0" layoutY="107.0" text="NamaResep" />
       <Label layoutX="25.0" layoutY="144.0" text="SuccessRate" />
       <Label layoutX="29.0" layoutY="255.0" text="IdItem" />
-      <TextField fx:id="txtiditem" layoutX="104.0" layoutY="251.0" />
-      <Label fx:id="lblnamaitem" layoutX="32.0" layoutY="224.0" text="..." />
+      <TextField fx:id="txtiditem" layoutX="104.0" layoutY="251.0" prefHeight="25.0" prefWidth="111.0" />
+      <Label fx:id="lblnamaitem" layoutX="106.0" layoutY="224.0" prefHeight="17.0" prefWidth="149.0" text="..." />
       <TextField fx:id="txtjumlah" layoutX="104.0" layoutY="287.0" />
       <Label layoutX="29.0" layoutY="291.0" text="Jumlah" />
       <Button fx:id="btntambah" layoutX="32.0" layoutY="337.0" mnemonicParsing="false" onAction="#tambahklik" text="Tambah" />
@@ -31,6 +31,7 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <Button fx:id="btnpilih" layoutX="214.0" layoutY="212.0" mnemonicParsing="false" onAction="#pilihklik" text="Pilih" />
+      <Button fx:id="btnpilih" layoutX="214.0" layoutY="251.0" mnemonicParsing="false" onAction="#pilihklik" text="Pilih" />
+      <Label layoutX="29.0" layoutY="225.0" text="NamaItem" />
    </children>
 </AnchorPane>

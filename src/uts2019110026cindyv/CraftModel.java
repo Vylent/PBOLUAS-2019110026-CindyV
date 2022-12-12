@@ -4,23 +4,24 @@
  */
 package uts2019110026cindyv;
 
+import java.sql.Date;
+
 /**
  *
  * @author 2019110026CindyV
  */
-public class DetailResepModel {
-    private String IdResep,IdItem;
-    private Integer Jumlah;
-    
-    public DetailResepModel() {
-        
-      }
-    
-    public DetailResepModel(String IdResep, String IdItem, Integer Jumlah) {
-        this.IdResep=IdResep; 
-        this.IdItem=IdItem;
-        this.Jumlah=Jumlah;  
-      }
+public class CraftModel {
+    String IdCraft,IdResep;
+    Date TanggalCraft;
+    Integer Jumlah;
+
+    public String getIdCraft() {
+        return IdCraft;
+    }
+
+    public void setIdCraft(String IdCraft) {
+        this.IdCraft = IdCraft;
+    }
 
     public String getIdResep() {
         return IdResep;
@@ -30,12 +31,12 @@ public class DetailResepModel {
         this.IdResep = IdResep;
     }
 
-    public String getIdItem() {
-        return IdItem;
+    public Date getTanggalCraft() {
+        return TanggalCraft;
     }
 
-    public void setIdItem(String IdItem) {
-        this.IdItem = IdItem;
+    public void setTanggalCraft(Date TanggalCraft) {
+        this.TanggalCraft = TanggalCraft;
     }
 
     public Integer getJumlah() {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uts2019110026cindyv.FXML_PilihBahanController">
+   <children>
+      <ComboBox fx:id="cmbfield" layoutX="28.0" layoutY="27.0" prefWidth="150.0" />
+      <TextField fx:id="txtisi" layoutX="193.0" layoutY="27.0" />
+      <Button fx:id="btncari" layoutX="371.0" layoutY="27.0" mnemonicParsing="false" onAction="#cariklik" text="Cari" />
+      <Button fx:id="btnpilih" layoutX="448.0" layoutY="27.0" mnemonicParsing="false" onAction="#pilihklik" text="Pilih" />
+      <Button fx:id="btnbatal" layoutX="521.0" layoutY="27.0" mnemonicParsing="false" onAction="#batalklik" text="Batal" />
+      <Button fx:id="btnawal" layoutX="37.0" layoutY="327.0" mnemonicParsing="false" onAction="#awalklik" prefHeight="25.0" prefWidth="55.0" text="Awal" />
+      <Button fx:id="btnsebelum" layoutX="168.0" layoutY="327.0" mnemonicParsing="false" onAction="#sebelumklik" prefHeight="25.0" prefWidth="74.0" text="Sebelum" />
+      <Button fx:id="btnsesudah" layoutX="353.0" layoutY="327.0" mnemonicParsing="false" onAction="#sesudahklik" prefHeight="25.0" prefWidth="74.0" text="Sesudah" />
+      <Button fx:id="btnakhir" layoutX="487.0" layoutY="327.0" mnemonicParsing="false" onAction="#akhirklik" prefHeight="25.0" prefWidth="63.0" text="Akhir" />
+      <TableView fx:id="tbvbahan" layoutX="28.0" layoutY="86.0" prefHeight="224.0" prefWidth="545.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="C1" />
+            <TableColumn prefWidth="75.0" text="C2" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

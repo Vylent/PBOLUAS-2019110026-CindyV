@@ -26,6 +26,8 @@ public class FXMLDocumentController implements Initializable {
     public static DBBahan dtbahan=new DBBahan();
     public static DBResep dtresep=new DBResep();
     public static DBDetailResep dtdetresep=new DBDetailResep();
+    public static DBCraft dtcraft=new DBCraft();
+    public static DBHasil dthasil=new DBHasil();
 
     private Label label;
     @FXML
@@ -38,6 +40,10 @@ public class FXMLDocumentController implements Initializable {
     private Button btntambahresep;
     @FXML
     private Button btnhasil;
+    @FXML
+    private Button btnlihatcraft;
+    @FXML
+    private Button btntambahcraft;
     
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
@@ -122,6 +128,27 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void hasilklik(ActionEvent event) {
     
+    }
+
+    @FXML
+    private void lihatcraftklik(ActionEvent event) {
+     try{
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("FXML_DisplayCraft.fxml"));    
+        Parent root = (Parent)loader.load();
+        Scene scene = new Scene(root);
+        Stage stg=new Stage();
+        stg.initModality(Modality.APPLICATION_MODAL);
+        stg.setResizable(false);
+        stg.setIconified(false);
+        stg.setScene(scene);
+        stg.show();        
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void btntambahklik(ActionEvent event) {
     }
     
 }

@@ -4,11 +4,15 @@
  */
 package uts2019110026cindyv;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -19,6 +23,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -168,5 +174,24 @@ tbvrecipe.getItems().add(tmp);
 
     @FXML
     private void pilihklik(ActionEvent event) {
+     try{
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("FXML_PilihBahan.fxml"));    
+        Parent root = (Parent)loader.load();
+        Scene scene = new Scene(root);
+        Stage stg=new Stage();
+        FXML_PilihBahanController isidt= (FXML_PilihBahanController)loader.getController();        
+        stg.initModality(Modality.APPLICATION_MODAL);
+        stg.setResizable(false);        
+        stg.setIconified(false);        
+        stg.setScene(scene);
+        stg.showAndWait();
+        if(isidt.getHasil()==1) {
+            BahanModel tmp=isidt.getData();
+            txtiditem.setText(tmp.getIdItem());            
+            lblnamaitem.setText(tmp.getNamaItem());
+        }
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }
